@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(#200016, #10001f);
+    height: 100vh;
+    font-family: system-ui;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header{
+    position: fixed;
+    z-index: 100;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+}
+
+header .logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li{
+    margin-right: 30px;
+}
+
+header ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+header ul li a:hover, .active{
+    background: #fff;
+    color: #200016 ;
+}
+
+.main{
+    /* In css i want the distance of the child element the same parent element 
+    so i want to do is the parent i give him a relative positon and the chilc 
+    absolute postion */
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* i notice that i have a color defferences between hero and p 
+so i add .main::after and the color*/
+.main::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%; 
+    background: linear-gradient(to top, #200016, transparent);
+    /* transparent this is just space or empty value
+    and add to top to change who is in the top */
+}
+
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#moon{
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+
+.nouvill{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transform: translateY(-140px);
+}
+
+.content{
+    color: #fff;
+    padding: 30px;
+}
+
+.content h2{
+    margin: 20px;
+    font-size: 30px;
+}
+.content p{
+    margin: 20px;
+}
